@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <title>Wikipedia App</title>
+</head>
+<body ng-app="wikiApp">
+<div class="search" ng-controller="MainController">
+	<label>Wikipedia</label>
+	<input type="text" ng-model="searchTerm" value="Israe" class="form-control" id="inputSearch" placeholder="What Are ypu looking for?">
+	<div class="test">
+	<div class="data" ng-repeat="item in results">
+		<a href="https://en.wikipedia.org/wiki/{{ item.title }}" target="_blank"><div class="eachContent">
+			<h2>{{ item.title }}</h2>
+			<p ng-bind-html="item.snippet"></p>
+		</div>
+		</a>
+			
+	</div>
+	</div>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.9/angular-sanitize.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+  <!-- <script src="js/main.js"></script> -->
+  <script src="js/service.js"></script>
+  <script src="js/controller.js"></script>
+
+
+</body>
+</html>
