@@ -11,8 +11,8 @@
 </head>
 <body ng-app="wikiApp">
 <div class="search" ng-controller="MainController">
-	<label>Wikipedia</label>
-	<input type="text" ng-model="searchTerm" value="Israe" class="form-control" id="inputSearch" placeholder="What Are ypu looking for?">
+	<label>Wikipedia Searcher</label>
+	<input type="text" ng-model="searchTerm" value="Israe" class="form-control" id="inputSearch" placeholder="What Are you looking for?">
 	<div class="test">
 	<div class="data" ng-repeat="item in results">
 		<a href="https://en.wikipedia.org/wiki/{{ item.title }}" target="_blank"><div class="eachContent">
@@ -20,7 +20,7 @@
 			<p ng-bind-html="item.snippet"></p>
 		</div>
 		</a>
-			
+
 	</div>
 	</div>
 </div>
